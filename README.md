@@ -19,3 +19,10 @@ Getting Started
       config.platform_key = "5xItr3dMDlEWAa9S4s7vYh7kQ01d5SFePPUoZZiK/vMfbo3A5BvJLAmD4tI="
       config.endpoint = "https://sandbox.tangocard.com"
     end
+    
+Troubleshooting
+----------------
+Rango uses RestClient, so you can visit https://github.com/rest-client/rest-client for more options.
+
+You can enable logging via:
+    RESTCLIENT_LOG=stdout rails c

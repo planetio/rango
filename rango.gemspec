@@ -12,4 +12,6 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/planetio/rango'
   s.license     = 'MIT'
   s.require_paths = ['lib']
+  s.add_runtime_dependency 'rest-client', '1.6.7'
+  
 end
