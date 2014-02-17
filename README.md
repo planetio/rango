@@ -23,11 +23,11 @@ Getting Started
 Usage
 ----------------
     
-    # create an account(customer, identifier, email)
-    Rango.accounts.create("customer1", "AcmeCo", "customer1@acmeco.com")
+    # create an account(customer, account, email)
+    Rango.accounts.create("AcmeCo", "HRDept", "hr@acmeco.com")
     
     # Lookup account
-    Rango.accounts.find("customer1", "AcmeCo")
+    Rango.accounts.find("AcmeCo", "HRDept")
     
 Troubleshooting
 ----------------
