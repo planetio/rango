@@ -7,13 +7,6 @@ module Rango
       Unirest
     end
 
-    # def get(resource, params={}, opts={})
-    #   client.get(resource, assemble_params(params, opts))
-    # end
-    # 
-    # def post(resource, params={}, opts={})
-    #   client.post(resource, assemble_params(params, opts))
-    # end
     def get(*args)
       client.get(*format_args(args))
     end
@@ -48,7 +41,7 @@ module Rango
     end
         
     def base_endpoint
-      endpoint + "/" + api_path_prefix
+      endpoint + "/" + api_path_prefix + "/"
     end
     
   end

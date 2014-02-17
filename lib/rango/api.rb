@@ -1,5 +1,6 @@
 require 'rango/configuration'
 require 'rango/request'
+require 'rango/resource'
 
 module Rango
   # @private
