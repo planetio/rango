@@ -22,8 +22,9 @@ Getting Started
 
 Usage
 ----------------
-    client = Rango::Client.new
     
+    # create an account(customer, identifier, email)
+    Rango.account.create("customer1", "AcmeCo", "customer1@acmeco.com")
     
 Troubleshooting
 ----------------
