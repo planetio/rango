@@ -23,7 +23,7 @@ module Rango
       def list(*args)
         set_customer_account!(args) 
         get "/",
-          customer: customer
+          customer: customer,
           account_identifier: account
       end
     end
