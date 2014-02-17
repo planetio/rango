@@ -15,9 +15,24 @@ module Rango
       super(client)
     end
 
-    def set_customer_account!(*args)
+    def set_customer_account!(args)
       self.customer = args.shift
       self.account = args.shift
+    end
+    
+    def get(*args)
+      ensure_customer_and_account!
+      super
+    end
+    
+    def post(*args)
+      ensure_customer_and_account!
+      super
+    end
+    
+    private
+    def ensure_customer_and_account!
+      raise "Invalid Request: Customer and account have not been specified and a required for this request!" unless self.customer.present? and self.account.present?
     end
   end
 end

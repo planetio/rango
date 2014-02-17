@@ -13,7 +13,7 @@ module Rango
       # (email)      
       def create(*args)
         set_customer_account!(args)
-        email = *args
+        email = args[0]
         post "/", customer: customer, identifier: account, email: email
       end
       
