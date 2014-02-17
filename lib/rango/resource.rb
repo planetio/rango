@@ -6,17 +6,17 @@ module Rango
       @client = client
     end
     
-    def get(*args)
-      client.get(resource_path, *args)
+    def get(request_path, params={})
+      client.get(resource_path(request_path), params)
     end
     
-    def post(*args)
-      client.post(resource_path, *args)
+    def post(request_path, params={})
+      client.post(resource_path(request_path), params)
     end
     
     private
-    def resource_path
-      self.class.name.demodulize.underscore
+    def resource_path(request_path)
+      self.class.name.demodulize.underscore + request_path
     end
   end
 end

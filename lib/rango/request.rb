@@ -8,31 +8,34 @@ module Rango
     end
 
     def get(*args)
-      client.get(*format_args(args))
+      resource = format_resource(args.shift)
+      resource += "?#{format_get_params(*args)}" if args.present?
+      params = default_options
+      client.get(resource, params)
     end
     
     def post(*args)
-      client.post(*format_args(args))
+      resource = format_resource(args.shift)
+      params = format_post_params(*args)
+      client.post(resource, params)
     end
 
     private
-    
-    def format_args(args)
-      resource = format_resource(args.shift)
-      params = format_params(*args)
-      [resource, params]
-    end
-    
+        
     def format_resource(resource)
       base_endpoint + resource
     end
     
-    def format_params(request_params={}, opts={})
+    def format_post_params(request_params={}, opts={})
       params = default_options
       params[:parameters] = request_params.to_json if request_params.present?
       params.merge(opts)
     end
 
+    def format_get_params(request_params={})
+      URI.encode_www_form(request_params)
+    end
+    
     def default_options
       {
         headers: {'Accept' => '*/*', 'Content-Type' => 'application/json'},

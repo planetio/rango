@@ -3,7 +3,7 @@ module Rango
     class Rewards < Resource
         
       def list
-        get
+        get "/"
       end
       
     end

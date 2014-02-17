@@ -24,7 +24,10 @@ Usage
 ----------------
     
     # create an account(customer, identifier, email)
-    Rango.account.create("customer1", "AcmeCo", "customer1@acmeco.com")
+    Rango.accounts.create("customer1", "AcmeCo", "customer1@acmeco.com")
+    
+    # Lookup account
+    Rango.accounts.find("customer1", "AcmeCo")
     
 Troubleshooting
 ----------------

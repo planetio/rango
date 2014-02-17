@@ -8,7 +8,7 @@ module Rango
 
     alias :api_endpoint :endpoint
 
-    def account
+    def accounts
       Accounts.new(self)
     end
     
