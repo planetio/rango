@@ -12,6 +12,11 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/planetio/rango'
   s.license     = 'MIT'
   s.require_paths = ['lib']
-  s.add_runtime_dependency 'rest-client', '1.6.7'
+  s.files       = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- test/*`.split("\n")  
+  s.add_runtime_dependency 'unirest', '1.1.1'
+
+  s.add_development_dependency('rake')
+  s.add_development_dependency('rspec')
   
 end

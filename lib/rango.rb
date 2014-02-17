@@ -2,6 +2,7 @@ require 'yammer'
 require 'rango/api'
 require 'rango/client'
 require 'rango/configuration'
+require 'rango/request'
 # require 'rango/error'
 
 module Rango

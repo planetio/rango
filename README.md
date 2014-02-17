@@ -19,6 +19,11 @@ Getting Started
       config.platform_key = "5xItr3dMDlEWAa9S4s7vYh7kQ01d5SFePPUoZZiK/vMfbo3A5BvJLAmD4tI="
       config.endpoint = "https://sandbox.tangocard.com"
     end
+
+Usage
+----------------
+    client = Rango::Client.new
+    
     
 Troubleshooting
 ----------------
