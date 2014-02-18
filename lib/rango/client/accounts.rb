@@ -4,7 +4,7 @@ module Rango
             
       # (customer, account)
       # ()      
-      def get(*args)
+      def fetch(*args)
         set_customer_account!(args)
         get "/#{customer}/#{account}"
       end

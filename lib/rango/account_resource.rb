@@ -5,7 +5,7 @@ module Rango
 
     RESOURCES.each do |resource|
       define_method(resource) do
-        resource.to_s.capitalize.constantize.new(customer, account)
+        "Rango::Client::#{resource.to_s.capitalize}".constantize.new(client, customer, account)
       end
     end
     
