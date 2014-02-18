@@ -22,7 +22,11 @@ Getting Started
 
 Usage
 ----------------
-    
+    There are two apis you can use depending on whether you want to be explicit with accounts or 
+    whether you want to save an account object and pass it around.
+
+  ### Explicit Api
+  
     # create an account: [customer, account, email]
     Rango.accounts.create("AcmeCo", "HRDept", "hr@acmeco.com")
     
@@ -53,6 +57,27 @@ Usage
     
     # Place an order: [customer, account, recipient, gift card sku, options]
     Rango.orders.create("AcmeCo", "HRDept", {name: "John Smith", email: "jsmith@acmeco.com"}, "800F-E-1000-STD", {})
+    
+  ### Implicit Api
+  
+    # instantiate an account object, just provides an interface to requests
+    # with account details so you can reuse an account object
+    account = Rango.accounts("AcmeCo", "HRDept")
+    
+    # you can create straight off
+    account.create
+    
+    # get order details
+    account.fetch
+    
+    # add funds
+    account.funds.add(amount, ip, credit_card)
+    
+    # place an order
+    account.orders.create({name: "John", email: "jsmith@acmeco.com"}, sku, options)
+    
+    # list orders
+    account.orders.list
     
 Troubleshooting
 ----------------
