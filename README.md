@@ -7,9 +7,9 @@ Installation
 ----------------
     gem install rango
 
-What's new in 0.0.1
+What's new in 0.1.0
 ----------------
-Installation!
+Awesome new dsl!
 
 Getting Started
 ----------------
