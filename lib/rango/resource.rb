@@ -16,7 +16,11 @@ module Rango
     
     private
     def resource_path(request_path)
-      self.class.name.demodulize.underscore + request_path
+      if request_path == "/"
+        self.class.name.demodulize.underscore
+      else
+        self.class.name.demodulize.underscore + request_path
+      end
     end
   end
 end
