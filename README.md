@@ -22,10 +22,10 @@ Getting Started
 
 Usage
 ----------------
-    There are two apis you can use depending on whether you want to be explicit with accounts or 
-    whether you want to save an account object and pass it around.
+    There are two apis you can use depending on whether you want to be explicit with accounts(Imperative api) or 
+    whether you want to save an account object and pass it around(declarative api).
 
-  ### Explicit Api
+  ### Imperative Api
   
     # create an account: [customer, account, email]
     Rango.accounts.create("AcmeCo", "HRDept", "hr@acmeco.com")
@@ -58,7 +58,7 @@ Usage
     # Place an order: [customer, account, recipient, gift card sku, options]
     Rango.orders.create("AcmeCo", "HRDept", {name: "John Smith", email: "jsmith@acmeco.com"}, "800F-E-1000-STD", {})
     
-  ### Implicit Api
+  ### Declarative Api
   
     # instantiate an account object, just provides an interface to requests
     # with account details so you can reuse an account object
