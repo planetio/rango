@@ -10,7 +10,7 @@ module Rango
         post "/", 
           customer: customer, 
           account_identifier: account, 
-          amount: amount,
+          amount: amount.to_i,
           client_ip: ip,
           credit_card: credit_card
       end

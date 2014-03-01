@@ -3,7 +3,8 @@ require 'rango/api'
 require 'rango/client'
 require 'rango/configuration'
 require 'rango/request'
-# require 'rango/error'
+require 'rango/response'
+
 
 module Rango
   extend Configuration

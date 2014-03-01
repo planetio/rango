@@ -7,6 +7,14 @@ Installation
 ----------------
     gem install rango
 
+What's new in 0.1.2
+----------------
+Added response abstraction
+
+What's new in 0.1.1
+----------------
+Added dependency to latest unirest gem to fix bad Basic Authentication encoding scheme
+
 What's new in 0.1.0
 ----------------
 Awesome new dsl!

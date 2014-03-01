@@ -11,15 +11,19 @@ module Rango
       resource = format_resource(args.shift)
       resource += "?#{format_get_params(*args)}" if args.present?
       params = default_options
-      client.get(resource, params)
+      respond client.get(resource, params)
     end
     
     def post(*args)
       resource = format_resource(args.shift)
       params = format_post_params(*args)
-      client.post(resource, params)
+      respond client.post(resource, params)
     end
 
+    def respond( response )
+      Response.new response
+    end
+    
     private
         
     def format_resource(resource)
